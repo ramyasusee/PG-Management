@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-22 22:45:03.684140",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "customer_name",
+  "column_break_wbyl",
+  "mob_no",
+  "emergency_contact"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.mob_no",
+   "fieldname": "mob_no",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Mob No",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.emergency_contact",
+   "fieldname": "emergency_contact",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Emergency Contact",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.full_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wbyl",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-23 15:53:53.925217",
+ "modified_by": "Administrator",
+ "module": "PG Managemnet",
+ "name": "Room Currently Staying Customer",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

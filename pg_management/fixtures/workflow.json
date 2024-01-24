@@ -1,0 +1,147 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Customer",
+  "is_active": 1,
+  "modified": "2024-01-23 12:10:37.512250",
+  "name": "Customer",
+  "override_status": 0,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "PG Manager",
+    "avoid_status_override": 0,
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Customer",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Currently Staying",
+    "update_field": "status",
+    "update_value": "Currently Staying",
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "PG Manager",
+    "avoid_status_override": 0,
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Customer",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Vacated",
+    "update_field": "status",
+    "update_value": "Vacated",
+    "workflow_builder_id": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Vacate",
+    "allow_self_approval": 1,
+    "allowed": "PG Manager",
+    "condition": null,
+    "next_state": "Vacated",
+    "parent": "Customer",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Currently Staying",
+    "workflow_builder_id": null
+   }
+  ],
+  "workflow_data": null,
+  "workflow_name": "Customer",
+  "workflow_state_field": "status"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Work Log",
+  "is_active": 1,
+  "modified": "2024-01-23 23:49:30.849804",
+  "name": "Work Log",
+  "override_status": 0,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "PG Manager",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Work Log",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Assigned",
+    "update_field": "status",
+    "update_value": "Assigned",
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "PG Employee",
+    "avoid_status_override": 0,
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Work Log",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "In Progress",
+    "update_field": "status",
+    "update_value": "In Progress",
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "PG Employee",
+    "avoid_status_override": 0,
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Work Log",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Completed",
+    "update_field": "status",
+    "update_value": "Completed",
+    "workflow_builder_id": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Mark In Progress",
+    "allow_self_approval": 1,
+    "allowed": "PG Employee",
+    "condition": null,
+    "next_state": "In Progress",
+    "parent": "Work Log",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Assigned",
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Complete",
+    "allow_self_approval": 1,
+    "allowed": "PG Employee",
+    "condition": null,
+    "next_state": "Completed",
+    "parent": "Work Log",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "In Progress",
+    "workflow_builder_id": null
+   }
+  ],
+  "workflow_data": null,
+  "workflow_name": "Work Log",
+  "workflow_state_field": "status"
+ }
+]

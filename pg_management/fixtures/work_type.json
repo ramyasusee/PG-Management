@@ -1,0 +1,26 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Work Type",
+  "is_periodic_maintenance": 1,
+  "modified": "2024-01-24 11:21:13.076490",
+  "name": "Brooming",
+  "work_type": "Brooming"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Work Type",
+  "is_periodic_maintenance": 0,
+  "modified": "2024-01-24 11:22:24.938401",
+  "name": "Water Tank cleaning",
+  "work_type": "Water Tank cleaning"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Work Type",
+  "is_periodic_maintenance": 1,
+  "modified": "2024-01-24 11:20:27.382877",
+  "name": "Cleaning",
+  "work_type": "Cleaning"
+ }
+]

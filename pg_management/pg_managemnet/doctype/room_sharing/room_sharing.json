@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "creation": "2024-01-22 22:29:06.800588",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sharing_type_section",
+  "sharing_name",
+  "max_no_of_members"
+ ],
+ "fields": [
+  {
+   "fieldname": "sharing_type_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sharing_name",
+   "fieldtype": "Data",
+   "label": "Sharing Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "max_no_of_members",
+   "fieldtype": "Int",
+   "label": "Max No.of Members"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-24 11:58:53.840431",
+ "modified_by": "Administrator",
+ "module": "PG Managemnet",
+ "name": "Room Sharing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PG Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

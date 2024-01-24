@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CUS-.######",
+ "creation": "2024-01-22 20:03:24.436310",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_section",
+  "full_name",
+  "mob_no",
+  "emergency_contact",
+  "column_break_kbty",
+  "status",
+  "occupation",
+  "id_proof",
+  "room_details_section",
+  "room",
+  "sharing",
+  "max_no_of_members",
+  "column_break_qayk",
+  "currency",
+  "room_advance",
+  "room_rent",
+  "section_break_rjrw",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Details"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kbty",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "id_proof",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "ID Proof",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room_details_section",
+   "fieldtype": "Section Break",
+   "label": "Room Details"
+  },
+  {
+   "fetch_from": "room.sharing",
+   "fieldname": "sharing",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sharing",
+   "options": "Room Sharing",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qayk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "room.advance",
+   "fieldname": "room_advance",
+   "fieldtype": "Currency",
+   "label": "Room Advance",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "room.room_rent",
+   "fieldname": "room_rent",
+   "fieldtype": "Currency",
+   "label": "Room Rent",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "default": "Currently Staying",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Currently Staying\nVacated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Room",
+   "options": "Room",
+   "reqd": 1
+  },
+  {
+   "fieldname": "emergency_contact",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Emergency Contact",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "room.currency",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "mob_no",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mob.No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_rjrw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "room.max_no_of_members",
+   "fieldname": "max_no_of_members",
+   "fieldtype": "Int",
+   "label": "Max No.of Members",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-23 15:52:28.579460",
+ "modified_by": "Administrator",
+ "module": "PG Managemnet",
+ "name": "Customer",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PG Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

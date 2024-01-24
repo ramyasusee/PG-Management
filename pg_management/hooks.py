@@ -133,7 +133,12 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
+    "cron": {
+        "0 1 * * 0": [
+			"pg_management.api.create_work_log"
+        ]
+    }
 # 	"all": [
 # 		"pg_management.tasks.all"
 # 	],
@@ -149,7 +154,16 @@ app_license = "mit"
 # 	"monthly": [
 # 		"pg_management.tasks.monthly"
 # 	],
-# }
+}
+
+# fixtures=[{"dt":"Role","filters":[]},
+#             {"dt":"Workflow","filters":[]},
+#             {"dt":"Workflow State","filters":[]},
+#             {"dt":"Workflow Action","filters":[]},
+#             {"dt":"Web Page","filters":[]},
+#             {"dt":"Room Sharing","filters":[]},
+#             {"dt":"Work Type","filters":[]},
+#             {"dt":"Workspace","filters":[]}]
 
 # Testing
 # -------

@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:room_name",
+ "creation": "2024-01-22 22:30:26.123032",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "room_name",
+  "sharing",
+  "max_no_of_members",
+  "column_break_labt",
+  "is_available",
+  "fee_details_section",
+  "currency",
+  "advance",
+  "room_rent",
+  "column_break_ppob",
+  "rent_cycle",
+  "grace_period",
+  "late_payment_fine",
+  "currently_staying_customer_details_section",
+  "currently_staying_customers"
+ ],
+ "fields": [
+  {
+   "fieldname": "sharing",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sharing",
+   "options": "Room Sharing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currently_staying_customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Currently Staying Customer Details"
+  },
+  {
+   "fieldname": "room_name",
+   "fieldtype": "Data",
+   "label": "Room Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "fee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Rent Details"
+  },
+  {
+   "fieldname": "advance",
+   "fieldtype": "Currency",
+   "label": "Advance",
+   "options": "currency"
+  },
+  {
+   "description": "per month",
+   "fieldname": "room_rent",
+   "fieldtype": "Currency",
+   "label": "Rent",
+   "options": "currency"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_ppob",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rent_cycle",
+   "fieldtype": "Data",
+   "label": "Rent Cycle"
+  },
+  {
+   "description": "in Days",
+   "fieldname": "grace_period",
+   "fieldtype": "Int",
+   "label": "Grace Period"
+  },
+  {
+   "description": "per Day",
+   "fieldname": "late_payment_fine",
+   "fieldtype": "Currency",
+   "label": "Late Payment Fine"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_available",
+   "fieldtype": "Check",
+   "label": "Is Available?",
+   "read_only": 1
+  },
+  {
+   "fieldname": "currently_staying_customers",
+   "fieldtype": "Table",
+   "options": "Room Currently Staying Customer"
+  },
+  {
+   "fieldname": "column_break_labt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sharing.max_no_of_members",
+   "fieldname": "max_no_of_members",
+   "fieldtype": "Int",
+   "label": "Max No.of Members",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 22:38:52.753918",
+ "modified_by": "Administrator",
+ "module": "PG Managemnet",
+ "name": "Room",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PG Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

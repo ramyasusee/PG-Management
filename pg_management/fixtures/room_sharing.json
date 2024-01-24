@@ -1,0 +1,26 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Room Sharing",
+  "max_no_of_members": 2,
+  "modified": "2024-01-24 11:57:04.308546",
+  "name": "Double Sharing",
+  "sharing_name": "Double Sharing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Room Sharing",
+  "max_no_of_members": 3,
+  "modified": "2024-01-24 11:59:09.450932",
+  "name": "Triple Sharing",
+  "sharing_name": "Triple Sharing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Room Sharing",
+  "max_no_of_members": 1,
+  "modified": "2024-01-23 15:52:49.004912",
+  "name": "Single Sharing",
+  "sharing_name": "Single Sharing"
+ }
+]

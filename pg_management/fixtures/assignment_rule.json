@@ -1,0 +1,64 @@
+[
+ {
+  "assign_condition": "status == 'Assigned'",
+  "assignment_days": [
+   {
+    "day": "Monday",
+    "parent": "Work Log",
+    "parentfield": "assignment_days",
+    "parenttype": "Assignment Rule"
+   },
+   {
+    "day": "Tuesday",
+    "parent": "Work Log",
+    "parentfield": "assignment_days",
+    "parenttype": "Assignment Rule"
+   },
+   {
+    "day": "Wednesday",
+    "parent": "Work Log",
+    "parentfield": "assignment_days",
+    "parenttype": "Assignment Rule"
+   },
+   {
+    "day": "Thursday",
+    "parent": "Work Log",
+    "parentfield": "assignment_days",
+    "parenttype": "Assignment Rule"
+   },
+   {
+    "day": "Friday",
+    "parent": "Work Log",
+    "parentfield": "assignment_days",
+    "parenttype": "Assignment Rule"
+   },
+   {
+    "day": "Saturday",
+    "parent": "Work Log",
+    "parentfield": "assignment_days",
+    "parenttype": "Assignment Rule"
+   },
+   {
+    "day": "Sunday",
+    "parent": "Work Log",
+    "parentfield": "assignment_days",
+    "parenttype": "Assignment Rule"
+   }
+  ],
+  "close_condition": null,
+  "description": "Automatic Assignment",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Assignment Rule",
+  "document_type": "Work Log",
+  "due_date_based_on": "date",
+  "field": null,
+  "last_user": "test@gmail.com",
+  "modified": "2024-01-24 12:15:26.660086",
+  "name": "Work Log",
+  "priority": 0,
+  "rule": "Load Balancing",
+  "unassign_condition": null,
+  "users": []
+ }
+]
