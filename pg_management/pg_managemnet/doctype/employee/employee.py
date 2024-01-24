@@ -6,7 +6,7 @@ from frappe.model.document import Document
 
 
 class Employee(Document):
-    def after_insert(self):
+    def before_insert(self):
         if not frappe.db.exists("User",self.email_id):
             user_doc = frappe.new_doc("User")
             user_doc.email = self.email_id

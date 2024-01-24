@@ -28,6 +28,8 @@
    "allow_on_submit": 1,
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee",
    "read_only": 1
@@ -42,6 +44,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Assigned\nIn Progress\nCompleted",
    "read_only": 1,
@@ -74,14 +77,17 @@
   {
    "fieldname": "room",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Room",
-   "options": "Room"
+   "options": "Room",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-24 11:52:25.386437",
+ "modified": "2024-01-24 12:51:07.432432",
  "modified_by": "Administrator",
  "module": "PG Managemnet",
  "name": "Work Log",
