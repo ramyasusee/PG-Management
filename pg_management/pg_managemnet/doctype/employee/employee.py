@@ -26,7 +26,7 @@ class Employee(Document):
                     )
             user_prof.flags.ignore_password_policy = True
             user_prof.save(ignore_permissions = True)
-            frappe.db.commit()
+            # frappe.db.commit()
             self.create_user_permission()
             self.append_user_in_worklog_ass_rule()
 
